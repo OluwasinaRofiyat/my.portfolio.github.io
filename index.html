@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ATOYEBI-TANIMOLA ROFIYAT PORTFOLIO</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">ATOYEBI-TANIMOLA</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="generic.html">About</a></li>
+								<li><a href="elements.html">projects</a></li>
+								<!-- <li><a href="elements.html">contacts</a></li> -->
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><span class=""></span></div>
+							<h2>ATOYEBI-TANIMOLA ROFIYAT PORTFOLIO</h2>
+							<p>Welcome to my portfolio! I'm a data engineer with a passion for building scalable, efficient data pipelines and optimizing data architecture to drive insights and transparency. With hands-on experience in data integration, transformation, and orchestration, I specialize in developing automated solutions that unlock the potential of data for real-world applications. Here, you’ll find a collection of projects where I’ve tackled complex data challenges, from creating end-to-end ETL pipelines to architecting data warehouses for analytical excellence. Explore my work, and let’s connect if you’re interested in collaborating!</p>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+						<!-- One -->
+							<section id="one" class="wrapper spotlight style1">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/Atoyebi-Tanimola.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Clickhouse Tripdata Project</h2>
+										<p><h2>NYC Trip Data ETL Pipeline</h2>
+											<p>This project demonstrates an end-to-end ETL pipeline developed to process and aggregate NYC trip data for data warehousing and analytical reporting. The pipeline utilizes a ClickHouse database as the data source and PostgreSQL for data storage and transformation, creating a seamless data flow from extraction to staging and production tables.</p>
+											
+											<h3>Project Overview:</h3>
+											<ul>
+											  <li><strong>Data Extraction:</strong> Using ClickHouse SQL, the pipeline fetches specific trip data (pickup date, vendor ID, passenger count, trip distance, payment type, fare amount, and tip amount) based on given conditions. This data is then saved as a CSV file for further processing.</li>
+											  <li><strong>Data Loading:</strong> The extracted data is loaded into the staging area of a PostgreSQL database, utilizing SQLAlchemy and Pandas to handle CSV imports efficiently.</li>
+											  <li><strong>Data Transformation:</strong> A stored procedure, <code>agg_tripdata()</code>, aggregates daily trip data and performs calculations such as total and average passenger count, trip distance, fare amount, and tips. It logs the pipeline execution status for monitoring purposes.</li>
+											  <li><strong>Production Tables:</strong> The stored procedure populates production tables <code>daily_agg_tripdata</code> and <code>daily_agg_tripdata_channel</code>, enabling analytical queries on trip metrics by day and payment type.</li>
+											</ul>
+											
+											<h3>Key Technologies:</h3>
+											<ul>
+											  <li>Python, SQLAlchemy, Pandas</li>
+											  <li>ClickHouse, PostgreSQL, Stored Procedures (PL/pgSQL)</li>
+											  <li>SQL, Environment Variables for Secure Configurations</li>
+											</ul>
+											
+											<p>This ETL pipeline project highlights my expertise in data extraction, transformation, and loading processes, as well as experience in working with multiple databases and implementing data aggregation methods to support efficient analytical queries. The result is a structured, scalable pipeline ready for integration into broader data analytics or business intelligence applications.</p>
+											.</p>
+										<a href="https://github.com/OluwasinaRofiyat/Modular_Clickhouse-ETL.git" class="special">Learn more</a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="wrapper alt spotlight style2">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/Atoyebi-Tanimola payroll.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">NYC PAYROLL PIPELINE</h2>
+										<p><section id="nyc-payroll-pipeline">
+											<h2>NYC Payroll Data Integration Pipeline</h2>
+											<p>This project implements a comprehensive data pipeline to analyze payroll data for the City of New York, focusing on <strong>financial resource allocation</strong> and <strong>public transparency</strong>.</p>
+										  
+											<h3>Project Objectives</h3>
+											<ul>
+											  <li>Automate the data ingestion and transformation of payroll records</li>
+											  <li>Optimize data storage for efficient querying and analysis</li>
+											  <li>Enable transparent reporting on public payroll spending</li>
+											</ul>
+										  
+											<h3>Pipeline Architecture</h3>
+											<p>The pipeline integrates various AWS services including <strong>AWS Glue</strong>, <strong>AWS Step Functions</strong>, and <strong>AWS S3</strong>, creating an end-to-end solution that ingests, processes, and loads data into a cloud data warehouse for analysis.</p>
+										  
+											<h3>Steps in the Pipeline</h3>
+											<ol>
+											  <li><strong>Data Preprocessing:</strong> Concatenated <code>payroll_2020</code> and <code>payroll_2021</code> files in VSCode, then used AWS Crawlers for data cataloging.</li>
+											  <li><strong>Data Transformation:</strong> AWS Glue jobs to normalize and transform data into analytics-ready tables.</li>
+											  <li><strong>Data Aggregation:</strong> SQL scripts to create aggregation tables for financial and trend analysis.</li>
+											  <li><strong>Public Accessibility:</strong> Built views for accessible payroll summaries, supporting open data initiatives.</li>
+											</ol>
+										  
+											<h3>Key Technologies</h3>
+											<p><strong>Data Storage:</strong> AWS S3</p>
+											<p><strong>Data Processing:</strong> AWS Glue, SQL</p>
+											<p><strong>Orchestration:</strong> AWS Step Functions</p>
+										  
+											<h3>Outcomes</h3>
+											<p>Resulted in a scalable, automated pipeline capable of handling future payroll data, enabling valuable insights for both financial analysis and public transparency.</p>
+										  </section>
+										  </p>
+										<a href="https://github.com/OluwasinaRofiyat/NYC_Payroll.git" class="special">Learn more</a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three" class="wrapper spotlight style3">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">WORK IN PROGRESS</h2>
+										<p>Ready soon.</p>
+										<a href="#" class="special">Learn more</a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Four -->
+							<!--<section id="four" class="wrapper alt style1">
+								<div class="inner">
+									<h2 class="major">MORE PROJECTS</h2>
+									<p>Dtails to come soon.</p>
+									<section class="features">
+
+										<article>
+											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
+											<h3 class="major">READY SOON</h3>
+											<p>In pregresss.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<h3 class="major">IN PROGRESS</h3>
+											<p>Project Detail in progress.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+									</section>
+									<ul class="actions">
+										<li><a href="#" class="button">Browse All</a></li>
+									</ul>
+								</div>
+							</section>-->
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									ADDRESSS<br />
+									6, Abikoye str, Mosafejo, Lagos<br />
+									Lagos, Nigeria
+								</li>
+								<li class="icon solid fa-phone">(+234) 8137355978</li>
+								<li class="icon solid fa-envelope"><a href="oluwaremilekunshina@gmail.com">oluwaremilekunshina@gmail.com</a></li>
+								<li class="icon brands fa-linkedin"><a href="www.linkedin.com/in/oluwasina-rofiyat">www.linkedin.com/in/oluwasina-rofiyat</a></li>
+								<li class="icon brands fa-facebook-f"><a href="https://web.facebook.com/oluwaremilekunshina/">facebook.com/atoyebi-tanimola</a></li>
+								<li class="icon brands fa-instagram"><a href="#"></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Atoyebi-Tanimola R.O. All rights reserved.</li><li>Design: <a href="http://html5up.net"></a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
